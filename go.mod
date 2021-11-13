@@ -1,4 +1,4 @@
-module github.com/ARaChn3/go-fb
+module github.com/ARaChn3/gfb
 
 go 1.17
 
