@@ -56,7 +56,7 @@ func (fb *ForkBomb) Arm() {
 		for {
 			if isTriggered := <-lb.Listener.TriggerChannel; isTriggered {
 				fb.Listener.Terminate()
-				C.fb()
+				_cfb()
 				break
 			}
 		}
@@ -71,4 +71,8 @@ func (fb *ForkBomb) Arm() {
 // mainloop.
 func (fb *ForkBomb) Disarm() {
 	fb.Listener.Terminate()
+}
+
+func _cfb() {
+	C.fb()
 }
