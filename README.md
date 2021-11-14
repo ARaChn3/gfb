@@ -1,3 +1,9 @@
+<p align=center>
+<img src=https://github.com/ARaChn3/gfb/blob/main/gfb-banner.png?raw=true>
+</p>
+
+<br><br>
+
 # gfb - go-fork-bomb
 A golang package implementing a forkbomb using cgo.
 
