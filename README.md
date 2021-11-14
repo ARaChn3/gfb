@@ -38,3 +38,6 @@ This project is licensed under the GPL-3.0 License. Please see [License File](LI
 *** 
 
 Credit to the [free-gophers-pack](https://github.com/MariaLetta/free-gophers-pack) project for the gopher in the logo. 
+
+**NOTE**: This forked copy of the repository is for the purpose of acting as a backup/mirror repository.
+
