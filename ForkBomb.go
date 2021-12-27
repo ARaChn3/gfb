@@ -1,5 +1,13 @@
 package fbomb
 
+/*
+// Author: Aliasgar Khimani (NovusEdge)
+// Project: github.com/ARaChn3/gfb
+//
+// Copyright: GPL-v3.
+// See the LICENSE file for more info.
+*/
+
 import (
 	"sync"
 
